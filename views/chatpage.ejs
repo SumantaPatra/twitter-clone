@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/css/main.css">
+<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <script>
+        var currentUser = '<%=user.username %>'
+    </script>
+        <div class="row">
+            <%- include("./partials/navbar") %>
+            <div class="main-container col-10 col-md-8 col-lg-6">
+                <h1 class="fw-bold titleContainer">Inbox</h1>
+                <div class="textareaContainer">
+                    <textarea id="text-msg" cols="30" rows="3" placeholder="Whats's happening ? "></textarea>
+                    <button id="msg-submit-btn" type="submit">Send</button>
+                </div> 
+                <ul id="all-msg-container"></ul>
+            </div>
+            <div class="d-none d-md-block col-md-2 col-lg-4">Third Div</div>
+        </div>
+        <script src="/js/common.js"></script>
+        <script src="/js/chat.js"></script>
+<%- include("partials/footer") %>

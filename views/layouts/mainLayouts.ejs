@@ -1,0 +1,34 @@
+<%- include("../partials/header") %>
+    <link rel="stylesheet" href="/css/main.css">
+    </head>
+
+    <body>
+
+        <div class="row">
+            <%- include("../partials/navbar") %>
+                <div class="main-container col-10 col-md-8 col-lg-6">
+                    <h1 class="fw-bold titleContainer">Home</h1>
+                    <%- include("../partials/modal") %>
+                        <div class="mb-3 postContainer">
+                            <div class="userImageContainer">
+                                <img src="/images/profilePic.jpeg" alt="User's Profile Image">
+                            </div>
+                            <div class="textareaContainer">
+                                <textarea id="post-text" cols="30" rows="3"
+                                    placeholder="Whats's happening ? "></textarea>
+                                <button id="submitPostButton">Post</button>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <ul id="allTweets"></ul>
+                        </div>
+
+                </div>
+                <div class="d-none d-md-block col-md-2 col-lg-4">Third Div</div>
+        </div>
+
+
+
+        <script src="/js/common.js"></script>
+        <%- include("../partials/footer") %>
